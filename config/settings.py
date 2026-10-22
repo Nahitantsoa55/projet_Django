@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-a0(!h3_1jz2_)&bs&m3bp)mgyi(%86wvweg9$q84senqnnjj@d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "gestion",
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,9 @@ MAILERS = {
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+LOGIN_URL = "connexion"
+LOGIN_REDIRECT_URL = "accueil"
+LOGOUT_REDIRECT_URL = "connexion"
